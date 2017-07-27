@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
 import jQuery from 'jquery';
 
-(function($) {
+export const menumaker = (function($) {
   $.fn.menumaker = function(options) {
     var cssmenu = $(this),
       settings = $.extend(
@@ -94,7 +93,7 @@ import jQuery from 'jquery';
   };
 })(jQuery);
 
-(function($) {
+export const menurender = (function($) {
   $(document).ready(function() {
     $(document).ready(function() {
       $('#cssmenu').menumaker({
@@ -109,33 +108,3 @@ import jQuery from 'jquery';
     });
   });
 })(jQuery);
-
-import './navigation.css';
-
-class Navigation extends Component {
-  render() {
-    return (
-      <nav className="align-center primary-navigation" id="cssmenu">
-        <ul>
-          <li className="active">
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="services.html">Services</a>
-          </li>
-          <li>
-            <a href="training.html">Training</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="contactus.html">Contact Us</a>
-          </li>
-        </ul>
-      </nav>
-    );
-  }
-}
-
-export default Navigation;
