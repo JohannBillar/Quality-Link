@@ -11,7 +11,8 @@
     "react-typography": "^0.15.0",
     "typography": "^0.15.8",
     "typography-breakpoint-constants": "^0.14.0",
-    "typography-plugin-code": "^0.15.9"
+    "typography-plugin-code": "^0.15.9",
+    "typography-theme-de-young": "^0.15.10"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
