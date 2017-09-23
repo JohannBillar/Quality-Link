@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { TypographyStyle } from 'react-typography';
-import TypographyStyle from './utils/typography';
+import { TypographyStyle, GoogleFont } from 'react-typography';
+import typography from './utils/typography';
 
 import favicon from './favicon.png';
 
@@ -37,6 +37,7 @@ export default class HTML extends React.Component {
           {this.props.headComponents}
           <link rel="shortcut icon" href={favicon} />
           <TypographyStyle typography={typography} />
+          <GoogleFont typography={typography} />
           {css}
         </head>
         <body>
