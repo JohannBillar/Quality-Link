@@ -14,30 +14,45 @@ export const menumaker = (function($) {
       );
 
     return this.each(function() {
-      cssmenu.find('li ul').parent().addClass('has-sub');
+      cssmenu
+        .find('li ul')
+        .parent()
+        .addClass('has-sub');
       if (settings.format != 'select') {
         cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
-        $(this).find('#menu-button').on('click', function() {
-          $(this).toggleClass('menu-opened');
-          var mainmenu = $(this).next('ul');
-          if (mainmenu.hasClass('open')) {
-            mainmenu.hide().removeClass('open');
-          } else {
-            mainmenu.show().addClass('open');
-            if (settings.format === 'dropdown') {
-              mainmenu.find('ul').show();
+        $(this)
+          .find('#menu-button')
+          .on('click', function() {
+            $(this).toggleClass('menu-opened');
+            var mainmenu = $(this).next('ul');
+            if (mainmenu.hasClass('open')) {
+              mainmenu.hide().removeClass('open');
+            } else {
+              mainmenu.show().addClass('open');
+              if (settings.format === 'dropdown') {
+                mainmenu.find('ul').show();
+              }
             }
-          }
-        });
+          });
 
         var multiTg = function() {
           cssmenu.find('.has-sub').prepend('<span class="submenu-button"></span>');
           cssmenu.find('.submenu-button').on('click', function() {
             $(this).toggleClass('submenu-opened');
-            if ($(this).siblings('ul').hasClass('open')) {
-              $(this).siblings('ul').removeClass('open').hide();
+            if (
+              $(this)
+                .siblings('ul')
+                .hasClass('open')
+            ) {
+              $(this)
+                .siblings('ul')
+                .removeClass('open')
+                .hide();
             } else {
-              $(this).siblings('ul').addClass('open').show();
+              $(this)
+                .siblings('ul')
+                .addClass('open')
+                .show();
             }
           });
         };
@@ -62,7 +77,9 @@ export const menumaker = (function($) {
           );
         });
         selectList.on('change', function() {
-          window.location = $(this).find('option:selected').val();
+          window.location = $(this)
+            .find('option:selected')
+            .val();
         });
       }
 
@@ -80,7 +97,10 @@ export const menumaker = (function($) {
         }
 
         if ($(window).width() <= settings.breakpoint && !cssmenu.hasClass('small-screen')) {
-          cssmenu.find('ul').hide().removeClass('open');
+          cssmenu
+            .find('ul')
+            .hide()
+            .removeClass('open');
           cssmenu.addClass('small-screen');
           if (settings.format === 'select') {
             cssmenu.find('select').show();
@@ -93,7 +113,7 @@ export const menumaker = (function($) {
   };
 })(jQuery);
 
-export const menurender = (function($) {
+export const menuRender = (function($) {
   $(document).ready(function() {
     $(document).ready(function() {
       $('#cssmenu').menumaker({
