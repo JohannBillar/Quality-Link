@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Training = () =>
+const Training = () => (
   <div>
-    <h1>Training Pages</h1>
+    <h1>Training</h1>
     <p>Hello how are you this is testing text?</p>
-  </div>;
+  </div>
+);
 
 export default Training;

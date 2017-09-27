@@ -1,0 +1,64 @@
+/* footer styles
+-----------------------------------------------*/
+.footer {
+  width: 100%;
+  /* 250px */
+  min-height: 25rem;
+  background-color: #1d2965;
+  color: #b5c5e9;
+  font-size: 61.808%;
+  margin: 0 auto;
+}
+.footer h4 {
+  /*margin-top: 1.112rem;*/
+  /*margin-bottom: 0.688rem;*/
+  color: #b5c5e9;
+  /*font-size: 1.75rem;*/
+}
+@media (min-width: 550px) {
+  .footer .social-media-navigation {
+    text-align: center;
+  }
+  .footer .secondary-navigation {
+    text-align: right;
+  }
+  .footer .secondary-navigation ul {
+    text-align: justify;
+  }
+}
+@media (min-width: 550px) {
+  .footer .secondary-navigation ul {
+    padding-left: 40%;
+  }
+}
+@media (min-width: 800px) {
+  .footer .secondary-navigation ul {
+    padding-left: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  .footer .secondary-navigation ul {
+    padding-left: 70%;
+  }
+}
+.footer ul {
+  margin-bottom: 0;
+  padding-right: 0;
+  margin: 0;
+}
+.footer ul li {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.footer a,
+.footer a:hover {
+  color: #b5c5e9;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+.footer small {
+  margin-top: 0;
+  margin-bottom: 0;
+}
