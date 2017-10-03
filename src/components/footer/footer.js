@@ -1,67 +1,107 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import { rhythm } from '../../utils/typography';
 import './footer.css';
 
 const Footer = () => (
   <footer className="footer">
-    <section className="container">
+    <section
+      style={{
+        width: '100%',
+        maxWidth: '960px',
+        margin: `0 auto`,
+        padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+        paddingTop: 0
+      }}
+    >
       <section className="row">
         <section className="four columns">
           <h4>Need help? Contact Us</h4>
           <address>
-            <i className="fa fa-map-marker" /> 4445 Eastgate Mall, Suite 200<br />
+            <span className="fa fa-map-marker" /> 4445 Eastgate Mall, Suite 200<br />
             San Diego, CA 92121<br />
             USA<br />
             <a href="tel://+6197191604">
-              <i className="fa fa-phone" /> 1-619-719-1604
+              <span className="fa fa-phone" /> 1-619-719-1604
             </a>
             <br />
             <a href="mailto:info@qualitylinkconsulting.com?SUBJECT=Website-information">
-              <i className="fa fa-envelope-o" /> info@qualitylinkconsulting.com
+              <span className="fa fa-envelope-o" /> info@qualitylinkconsulting.com
             </a>
           </address>
         </section>
         <nav className="four columns social-media-navigation">
           <h4>Connect With Quality Link</h4>
-          <a href="https://www.linkedin.com/nhome/">
-            <i className="fa fa-linkedin-square fa-3x" />
+          <a to="https://www.linkedin.com/nhome/">
+            <span className="fa fa-linkedin-square fa-3x" />
           </a>
-          <a href="https://accounts.google.com">
-            <i className="fa fa-google-plus-square fa-3x" />
+          <a to="https://accounts.google.com">
+            <span className="fa fa-google-plus-square fa-3x" />
           </a>
         </nav>
         <nav className="four columns secondary-navigation">
           <h4>Navigate Site</h4>
           <uL>
             <li>
-              <a href="index.html">
-                <i className="fa fa-home" /> Home
-              </a>
+              <Link
+                to="/"
+                exact
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-home" /> Home
+              </Link>
             </li>
             <li>
-              <a href="services.html">
-                <i className="fa fa-angle-double-right" /> Services
-              </a>
+              <Link
+                to="/services/"
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-angle-double-right" /> Services
+              </Link>
             </li>
             <li>
-              <a href="training.html">
-                <i className="fa fa-book" /> Training
-              </a>
+              <Link
+                to="/training/"
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-book" /> Training
+              </Link>
             </li>
             <li>
-              <a href="about.html">
-                <i className="fa fa-info-circle" /> About
-              </a>
+              <Link
+                to="/about/"
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-info-circle" /> About
+              </Link>
             </li>
             <li>
-              <a href="contactus.html">
-                <i className="fa fa-envelope" /> Contact Us
-              </a>
+              <Link
+                to="/contact/"
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-envelope" /> Contact
+              </Link>
             </li>
             <li>
-              <a href="sitemap.html">
-                <i className="fa fa-sitemap" /> Site Map
-              </a>
+              <Link
+                to="/sitemap/"
+                activeStyle={{
+                  color: '#dff2fa'
+                }}
+              >
+                <span className="fa fa-sitemap" /> Site Map
+              </Link>
             </li>
           </uL>
         </nav>
