@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
-import { menumaker, menurender } from './menu';
+import { menumaker, menuRender } from './menu';
 
 import './navigation.css';
 
@@ -9,12 +9,12 @@ class Navigation extends Component {
     return (
       <nav className="align-center primary-navigation" id="cssmenu">
         <ul>
-          <li className="active">
+          <li>
             <Link
               to="/"
-              style={{
-                color: 'white',
-                textDecoration: 'none'
+              exact
+              activeStyle={{
+                color: '#dff2fa'
               }}
             >
               Home
@@ -23,9 +23,8 @@ class Navigation extends Component {
           <li>
             <Link
               to="/services/"
-              style={{
-                color: 'white',
-                textDecoration: 'none'
+              activeStyle={{
+                color: '#dff2fa'
               }}
             >
               Services
@@ -34,9 +33,8 @@ class Navigation extends Component {
           <li>
             <Link
               to="/training/"
-              style={{
-                color: 'white',
-                textDecoration: 'none'
+              activeStyle={{
+                color: '#dff2fa'
               }}
             >
               Training
@@ -45,9 +43,8 @@ class Navigation extends Component {
           <li>
             <Link
               to="/about/"
-              style={{
-                color: 'white',
-                textDecoration: 'none'
+              activeStyle={{
+                color: '#dff2fa'
               }}
             >
               About
@@ -56,9 +53,8 @@ class Navigation extends Component {
           <li>
             <Link
               to="/contact/"
-              style={{
-                color: 'white',
-                textDecoration: 'none'
+              activeStyle={{
+                color: '#dff2fa'
               }}
             >
               Contact Us

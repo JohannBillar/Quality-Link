@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { rhythm } from '../utils/typography';
-import Navigation from '../components/Navigation/Navigation';
+import Navigation from '../components/navigation/Navigation';
+import Footer from '../components/footer/Footer';
+import '../css/main.css';
 
 export default class Template extends React.Component {
   static propTypes = {
     children: PropTypes.func
   };
-
   render() {
     return (
       <div>
@@ -17,32 +18,34 @@ export default class Template extends React.Component {
           title="Quality Link Consulting"
           meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
         />
-        <div
-          style={{
-            background: `#1d2965`,
-            marginBottom: rhythm(1)
-          }}
-        >
+        {/* 
           <div
             style={{
-              margin: `0 auto`,
-              maxWidth: 960,
-              padding: `${rhythm(1)} ${rhythm(3 / 4)}`
+              background: `#1d2965`,
+              marginBottom: rhythm(1)
             }}
           >
-            <h1 style={{ margin: 0 }}>
-              <Link
-                to="/"
-                style={{
-                  color: 'white',
-                  textDecoration: 'none'
-                }}
-              >
-                Quality Link
-              </Link>
-            </h1>
+            <div
+              style={{
+                margin: `0 auto`,
+                maxWidth: 960,
+                padding: `${rhythm(1)} ${rhythm(3 / 4)}`
+              }}
+            >
+              <h1 style={{ margin: 0 }}>
+                <Link
+                  to="/"
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none'
+                  }}
+                >
+                  Quality Link
+                </Link>
+              </h1>
+            </div>
           </div>
-        </div>
+        */}
         <Navigation />
         <div
           style={{
@@ -54,6 +57,7 @@ export default class Template extends React.Component {
         >
           {this.props.children()}
         </div>
+        <Footer />
       </div>
     );
   }

@@ -1,8 +1,9 @@
 import React from 'react';
 
-const Services = () =>
+const Services = () => (
   <div>
-    <h1>Services Pages</h1>
-  </div>;
+    <h1>Services</h1>
+  </div>
+);
 
 export default Services;

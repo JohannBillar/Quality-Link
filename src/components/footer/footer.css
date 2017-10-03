@@ -1,0 +1,71 @@
+/* footer styles
+-----------------------------------------------*/
+.footer {
+  width: 100%;
+  min-height: 32rem;
+  background-color: #1d2965;
+  color: #b5c5e9;
+  font-size: 61.808%;
+  margin: 0 auto;
+}
+.footer h4 {
+  color: #b5c5e9;
+}
+
+span.fa-linkedin-square,
+span.fa-google-plus-square {
+  padding-right: 5px;
+}
+
+@media (min-width: 550px) {
+  .footer {
+    min-height: 16rem;
+  }
+  .footer .social-media-navigation h4 {
+  }
+  .fa-linkedin-square,
+  .fa-google-plus-square {
+  }
+  .footer .secondary-navigation ul {
+    text-align: justify;
+  }
+}
+@media (min-width: 800px) {
+  .footer {
+    min-height: 14rem;
+  }
+  .footer .secondary-navigation ul {
+  }
+}
+@media (min-width: 900px) {
+}
+
+.footer ul {
+  margin-bottom: 0;
+  padding-right: 0;
+  margin: 0;
+}
+.footer ul li {
+  list-style-type: none;
+  margin-bottom: 0;
+}
+.footer a,
+.footer a:hover {
+  color: #b5c5e9;
+}
+
+.footer p {
+  margin-bottom: 0;
+}
+.footer small {
+  margin-top: 25px;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+@media (min-width: 550px) {
+  .footer small {
+    margin-top: 0;
+    text-align: center;
+  }
+}

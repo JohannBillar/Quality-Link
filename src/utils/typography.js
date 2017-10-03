@@ -1,11 +1,9 @@
 import ReactDOM from 'react-dom/server';
 import React from 'react';
 import Typography from 'typography';
-// import CodePlugin from 'typography-plugin-code';
-// import { MOBILE_MEDIA_QUERY } from 'typography-breakpoint-constants';
-import deYoung from 'typography-theme-de-young';
+import DeYoung from 'typography-theme-de-young';
 
-const typography = new Typography(deYoung);
+const typography = new Typography(DeYoung);
 
 // const options = {
 //   baseFontSize: '24px',
