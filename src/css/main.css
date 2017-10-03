@@ -9,19 +9,8 @@ html {
   box-sizing: inherit;
 }
 
-body,
-h1,
-h2 {
+body {
   color: #161f4b;
-}
-
-h1 {
-  text-transform: uppercase;
-  text-align: center;
-}
-
-h3 {
-  color: #3348b1;
 }
 
 img {
@@ -183,6 +172,21 @@ address {
   .offset-by-one-half.columns {
     margin-left: 52%;
   }
+}
+
+/* inserts quality link icone in front of a list */
+.quality-link-icon {
+  list-style-image: url('../img/quality-links-icon_16x16.png');
+  list-style-position: inside;
+}
+
+.quality-link-icon-xxl {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url('../../quality-link/img/Quality-Link-links.png');
+  background-position: ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 40rem;
 }
 
 /* Self Clearing Goodness */
