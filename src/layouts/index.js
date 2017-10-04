@@ -13,7 +13,7 @@ export default class Template extends React.Component {
   };
   render() {
     return (
-      <div>
+      <main>
         <Helmet
           title="Quality Link Consulting"
           meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
@@ -58,7 +58,7 @@ export default class Template extends React.Component {
           {this.props.children()}
         </div>
         <Footer />
-      </div>
+      </main>
     );
   }
 }

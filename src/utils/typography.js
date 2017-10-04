@@ -1,34 +1,24 @@
 import ReactDOM from 'react-dom/server';
 import React from 'react';
 import Typography from 'typography';
-import DeYoung from 'typography-theme-de-young';
+import deYoungTheme from 'typography-theme-de-young';
 
-const typography = new Typography(DeYoung);
+deYoungTheme.overrideThemeStyles = ({ rhythm }, options) => ({
+  googleFonts: [
+    {
+      name: 'Open Sans',
+      styles: ['300', '300i', '400'].join(', ')
+    }
+  ],
+  'p,li': {
+    fontFamily: ['Open Sans', 'sans-serif'].join(','),
+    fontWeight: '300',
+    fontSize: `${15 / 18 * 100}%`
+  },
+  'nav ul li a': { fontFamily: ['Open Sans', 'sans-serif'].join(','), fontWeight: '400', fontStyle: 'normal' }
+});
 
-// const options = {
-//   baseFontSize: '24px',
-//   baseLineHeight: 1.45,
-//   scaleRatio: 2.25,
-//   googleFonts: [
-//     {
-//       name: 'Raleway',
-//       styles: ['400']
-//     }
-//   ],
-//   headerFontFamily: ['Raleway', 'sans-serif'],
-//   bodyFontFamily: ['Raleway', 'sans-serif'],
-//   plugins: [new CodePlugin()],
-//   overrideStyles: ({ rhythm, scale }, options) => ({
-//     [MOBILE_MEDIA_QUERY]: {
-//       // Make baseFontSize on mobile 16px.
-//       html: {
-//         fontSize: `${16 / 16 * 100}%`
-//       }
-//     }
-//   })
-// };
-
-// const typography = new Typography(options);
+const typography = new Typography(deYoungTheme);
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
