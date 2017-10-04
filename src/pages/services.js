@@ -9,7 +9,7 @@ const Services = () => (
       </div>
       <section>
         <Header2 color="#161f4b">Quality Link Services</Header2>
-        <div className="row">
+        <div className="row services">
           <article className="four columns">
             <Header3 color="#3348b1" id="global-quality-audits">
               Global Quality Audits

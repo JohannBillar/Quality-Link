@@ -190,17 +190,31 @@ a:active {
   margin-left: 0;
 }
 
-.quality-link-icon-xxl {
-  background-color: rgba(255, 255, 255, 0.9);
-  background-image: url('../assets/quality-link-links.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  min-height: 15rem;
+@media (min-width: 550px) {
+  .quality-link-icon-xxl {
+    background-color: rgba(255, 255, 255, 0.9);
+    background-image: url('../assets/quality-link-links.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 15rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .quality-link-icon-xxl {
+    margin-left: 30%;
+  }
 }
 
 .country-list {
   list-style-type: none;
   text-align: center;
+}
+
+/* Services */
+.services ul li {
+  font-style: italic;
+  font-weight: lighter;
 }
 
 /* Self Clearing Goodness */

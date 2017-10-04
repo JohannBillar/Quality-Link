@@ -90,7 +90,7 @@ const Footer = () => (
                   color: '#dff2fa'
                 }}
               >
-                <span className="fa fa-envelope" /> Contact
+                <span className="fa fa-envelope" /> Contact Us
               </Link>
             </li>
             <li>
@@ -108,9 +108,7 @@ const Footer = () => (
       </section>
       <section className="row">
         <p>
-          <small className="twelve columns">
-            Copyright &copy; {new Date().getFullYear()} Quality Link Consulting LLC.
-          </small>
+          <small className="twelve columns">Copyright &copy; {new Date().getFullYear()} Quality Link LLC.</small>
         </p>
       </section>
     </section>

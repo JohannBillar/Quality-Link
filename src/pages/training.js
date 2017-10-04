@@ -7,7 +7,6 @@ const Training = () => (
       <div>
         <Header1 color="#161f4b">Training</Header1>
       </div>
-
       <section>
         <Header2 color="#161f4b">Quality Link Training</Header2>
         <div className="row">
