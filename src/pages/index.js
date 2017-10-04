@@ -91,7 +91,7 @@ export default class Index extends Component {
                   <Link to="/services/#vendor-management">Vendor Management</Link>
                 </li>
                 <li>
-                  <Link to="/services/#training">Training</Link>
+                  <Link to="/training/#training">Training</Link>
                 </li>
               </ul>
             </nav>
