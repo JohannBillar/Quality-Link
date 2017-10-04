@@ -23,6 +23,15 @@ address {
   margin: 0;
 }
 
+a {
+  color: #3348b1;
+  text-decoration: none;
+}
+a:hover,
+a:active {
+  color: #3348b1;
+}
+
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––*/
 .container {
@@ -176,17 +185,22 @@ address {
 
 /* inserts quality link icone in front of a list */
 .quality-link-icon {
-  list-style-image: url('../img/quality-links-icon_16x16.png');
+  list-style-image: url('../assets/quality-links-icon_16x16.png');
   list-style-position: inside;
+  margin-left: 0;
 }
 
 .quality-link-icon-xxl {
   background-color: rgba(255, 255, 255, 0.9);
-  background-image: url('../../quality-link/img/Quality-Link-links.png');
-  background-position: ;
+  background-image: url('../assets/quality-link-links.png');
   background-repeat: no-repeat;
   background-size: contain;
-  min-height: 40rem;
+  min-height: 15rem;
+}
+
+.country-list {
+  list-style-type: none;
+  text-align: center;
 }
 
 /* Self Clearing Goodness */

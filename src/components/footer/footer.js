@@ -8,7 +8,7 @@ const Footer = () => (
     <section
       style={{
         width: '100%',
-        maxWidth: '960px',
+        maxWidth: 960,
         margin: `0 auto`,
         padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
         paddingTop: 0
