@@ -1,9 +1,17 @@
 import React from 'react';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
+import { rhythm } from '../utils/typography';
+
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
 
 const Training = () => (
   <div>
-    <section>
+    <section style={container}>
       <div>
         <Header1 color="#161f4b">Training</Header1>
       </div>

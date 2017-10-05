@@ -217,6 +217,62 @@ a:active {
   font-weight: lighter;
 }
 
+/* style the groups
+--------------------------------------------- */
+/*.logo {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url('../assets/QualityLinkLogo_974x110.png');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 10rem;
+  margin-top: 47px;
+}*/
+
+/*#group1 .logo {
+  background-color: rgba(255, 255, 255, 0.9);
+  background-image: url('../assets/QualityLinkLogo_974x110.png');
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 5rem;
+}*/
+/*.dna-helix {
+  background: rgb(255, 255, 255);
+  background-image: url('../assets/DNA-Helix_high_989x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20rem;
+}*/
+.quality-link-consulting {
+  padding: 1%;
+  background-color: rgba(1, 28, 55, 0.5);
+}
+
+/*#group1 .beaker-pipette {
+  background: rgb(255, 255, 255);
+  background-image: url('../assets/Beaker-Pipette_high_989x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20rem;
+}
+#group1 .periodic-table {
+  background: rgb(255, 255, 255);
+  background-image: url('../assets/Periodic-Table_high_989x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20rem;
+}
+#group3 .parallax__layer--deep {
+  background: rgb(255, 255, 255);
+  background-image: url('../assets/WorldMap_medium_989x640.jpg');
+  background-size: cover;
+  min-height: 20rem;
+}*/
+/*#group4 .parallax__layer--base {
+  background: rgb(255, 255, 255);
+}*/
+
 /* Self Clearing Goodness */
 .container:after,
 .row:after,

@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
+import { Parallax, Background } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { rhythm } from '../utils/typography';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
+import Helix from '../assets/DNA-Helix_high_989x640.jpg';
+
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
 
 export default class Index extends Component {
   render() {
     return (
       <div>
         <section>
-          <div>
-            <Header1 color="#161f4b">Quality Link Consulting</Header1>
-          </div>
-          <section>
+          <Parallax bgImage={Helix} strength={300}>
+            <Header1 color="#ffffff">
+              <span className="quality-link-consulting">Quality Link Consulting</span>
+            </Header1>
+          </Parallax>
+
+          <section style={container}>
             <Header2 color="#161f4b">Audits and Consulting</Header2>
             <div className="row">
               <div className="seven columns">
@@ -39,7 +51,7 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <section>
+        <section style={container}>
           <div>
             <Header1 color="#161f4b">Global Quality Assurance</Header1>
           </div>
@@ -62,7 +74,7 @@ export default class Index extends Component {
           </article>
         </section>
 
-        <section>
+        <section style={container}>
           <Header2 color="#161f4b">Quality Link Services</Header2>
           <div className="row">
             <section className="six columns services" style={{ marginTop: `${rhythm(1 / 2)}` }}>

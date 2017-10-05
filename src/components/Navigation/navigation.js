@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import { menumaker, menuRender } from './menu';
+import Logo from '../../assets/QualityLinkLogo_974x110.png';
 
 import './navigation.css';
 
@@ -9,6 +10,11 @@ class Navigation extends Component {
     return (
       <nav className="align-center primary-navigation" id="cssmenu">
         <ul>
+          <div className="navigation-logo">
+            <Link to="/">
+              <img className="navigation-logo-image" src={Logo} alt="logo" />
+            </Link>
+          </div>
           <li>
             <Link
               to="/"

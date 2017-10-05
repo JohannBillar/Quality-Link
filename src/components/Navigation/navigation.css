@@ -1,5 +1,17 @@
 /* CSS Responsive jQuery from menu maker
 --------------------------------------------------*/
+nav#cssmenu {
+  width: 100%;
+}
+#cssmenu {
+  position: fixed;
+  top: 0;
+  margin: auto;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 #cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
@@ -11,7 +23,6 @@
   list-style: none;
   line-height: 1;
   display: block;
-  position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -30,7 +41,6 @@
 }
 #cssmenu {
   width: auto;
-  font-family: Raleway, sans-serif;
   line-height: 1;
 }
 #cssmenu > ul {
@@ -72,9 +82,6 @@
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
-/*#cssmenu > ul > li.active > a {
-  color: #dff2fa;
-}*/
 #cssmenu > ul > li:hover > a,
 #cssmenu > ul > li > a:hover {
   color: #dff2fa;
@@ -178,4 +185,36 @@
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
   background: #dff2fa;
+}
+
+/* Logo in navigation styles
+--------------------------------------------------*/
+
+nav#cssmenu ul {
+  text-align: right !important;
+}
+
+@media (min-width: 768px) {
+  div.navigation-logo {
+    float: left;
+    width: 30%;
+    display: inline-block;
+  }
+  img.navigation-logo-image {
+    background-color: #ffffff;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+@media (min-width: 1100px) {
+  div.navigation-logo {
+    width: 25%;
+  }
+  img.navigation-logo-image {
+    margin-top: 4px;
+    margin-left: 4px;
+  }
 }

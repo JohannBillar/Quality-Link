@@ -19,16 +19,7 @@ export default class Template extends React.Component {
           meta={[{ name: 'description', content: 'Sample' }, { name: 'keywords', content: 'sample, something' }]}
         />
         <Navigation />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-            paddingTop: 0
-          }}
-        >
-          {this.props.children()}
-        </div>
+        <div>{this.props.children()}</div>
         <Footer />
       </main>
     );

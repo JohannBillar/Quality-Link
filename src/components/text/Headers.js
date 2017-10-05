@@ -6,6 +6,7 @@ export const Header1 = ({ color, children }) => (
       textTransform: 'uppercase',
       textAlign: 'center',
       paddingTop: '8rem',
+      paddingBottom: '8rem',
       color: color
     }}
   >
