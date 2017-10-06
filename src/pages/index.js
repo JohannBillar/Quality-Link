@@ -52,7 +52,7 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <Parallax bgImage={WorldMap} strength={400}>
+        <Parallax bgImage={WorldMap} strength={500}>
           <div style={container} className="row">
             <section className="nine columns">
               <Header1 color="#161f4b">
