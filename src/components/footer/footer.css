@@ -21,7 +21,8 @@ span.fa-google-plus-square {
   .footer {
     min-height: 16rem;
   }
-  .footer .social-media-navigation h4 {
+  .footer .social-media-navigation {
+    text-align: center;
   }
   .fa-linkedin-square,
   .fa-google-plus-square {
@@ -38,8 +39,6 @@ span.fa-google-plus-square {
   .footer .secondary-navigation h4:last-of-type {
     text-align: right;
   }
-}
-@media (min-width: 900px) {
 }
 
 .footer ul {

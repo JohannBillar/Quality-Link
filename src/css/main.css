@@ -186,20 +186,18 @@ a:active {
 /* Headers on top of images */
 
 span.quality-link-consulting {
-  padding: 1%;
+  padding: 1px;
   background-color: rgba(1, 28, 55, 0.5);
 }
 span.global-quality-assurance {
-  padding: 1%;
+  padding: 1px;
   color: #161f4b;
   background-color: rgba(255, 255, 255, 0.5);
-  /*margin-left: 30px;*/
 }
 
 .country-list {
   list-style-type: none;
   text-align: right;
-  /*margin-right: 30px;*/
 }
 
 /* inserts quality link icone in front of a list */
