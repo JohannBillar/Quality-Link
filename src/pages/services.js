@@ -13,9 +13,9 @@ const container = {
 
 const Services = () => (
   <div>
-    <Parallax bgImage={Beaker} strength={200}>
-      <Header1 color="#ffffff">
-        <span className="quality-link-consulting">Services</span>
+    <Parallax bgImage={Beaker} strength={400}>
+      <Header1 color="#161f4b">
+        <span className="quality-link-services">Services</span>
       </Header1>
     </Parallax>
 

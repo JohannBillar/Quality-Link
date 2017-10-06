@@ -185,13 +185,14 @@ a:active {
 
 /* Headers on top of images */
 
-span.quality-link-consulting {
+span.quality-link-consulting,
+span.quality-link-training {
   padding: 1px;
   background-color: rgba(1, 28, 55, 0.5);
 }
-span.global-quality-assurance {
+span.global-quality-assurance,
+span.quality-link-services {
   padding: 1px;
-  color: #161f4b;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
