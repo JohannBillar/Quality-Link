@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { rhythm } from '../utils/typography';
