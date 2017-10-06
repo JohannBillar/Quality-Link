@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import { layoutGenerator } from 'react-break';
 import { rhythm } from '../utils/typography';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Helix from '../assets/DNA-Helix_high_989x640.jpg';
@@ -14,16 +15,35 @@ const container = {
   paddingTop: 0
 };
 
+const layout = layoutGenerator({
+  mobile: 0,
+  phablet: 550,
+  tablet: 768,
+  desktop: 992
+});
+
+const OnMobile = layout.is('mobile');
+const OnAtLeastTablet = layout.isAtLeast('tablet');
+const OnAtMostPhablet = layout.isAtMost('phablet');
+const OnDesktop = layout.is('desktop');
+
 export default class Index extends Component {
   render() {
     return (
       <div>
         <section>
-          <Parallax bgImage={Helix} strength={200}>
+          <OnMobile>
             <Header1 color="#ffffff">
               <span className="quality-link-consulting">Quality Link Consulting</span>
             </Header1>
-          </Parallax>
+          </OnMobile>
+          <OnAtLeastTablet>
+            <Parallax bgImage={Helix} strength={200}>
+              <Header1 color="#ffffff">
+                <span className="quality-link-consulting">Quality Link Consulting</span>
+              </Header1>
+            </Parallax>
+          </OnAtLeastTablet>
 
           <section style={container}>
             <Header2 color="#161f4b">Audits and Consulting</Header2>
