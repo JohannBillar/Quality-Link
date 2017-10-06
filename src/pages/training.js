@@ -1,12 +1,24 @@
 import React from 'react';
+import { Parallax } from 'react-parallax';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
+import Beaker from '../assets/Periodic-Table_high_989x640.jpg';
+import { rhythm } from '../utils/typography';
+
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
 
 const Training = () => (
   <div>
-    <section>
-      <div>
-        <Header1 color="#161f4b">Training</Header1>
-      </div>
+    <Parallax bgImage={Beaker} strength={400}>
+      <Header1 color="#ffffff">
+        <span className="quality-link-training">Training</span>
+      </Header1>
+    </Parallax>
+    <section style={container}>
       <section>
         <Header2 color="#161f4b">Quality Link Training</Header2>
         <div className="row">

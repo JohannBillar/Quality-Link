@@ -1,10 +1,18 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
+import { rhythm } from '../utils/typography';
+
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
 
 const Contact = () => (
   <div>
-    <section>
+    <section style={container}>
       <div>
         <Header1 color="#161f4b">Contact</Header1>
       </div>
@@ -30,12 +38,12 @@ const Contact = () => (
           </section>
 
           <section className="five columns">
-            <form name="contactus-form" autocomplete="on">
+            <form name="contactus-form">
               <fieldset>
                 <legend>
                   <Header3 color="#3348b1">WRITE US</Header3>
                 </legend>
-                <label for="name" className="field-type">
+                <label htmlFor="name" className="field-type">
                   Your Name:
                 </label>
                 <input
@@ -43,11 +51,11 @@ const Contact = () => (
                   id="name"
                   name="clientname"
                   placeholder=" enter your name"
-                  maxlength="30"
+                  maxLength="30"
                   autoFocus
                   required
                 />
-                <label for="email" className="field-type">
+                <label htmlFor="email" className="field-type">
                   Your Email:
                 </label>
                 <input
@@ -55,15 +63,15 @@ const Contact = () => (
                   id="email"
                   name="clientemail"
                   placeholder=" enter your email"
-                  maxlength="30"
+                  maxLength="30"
                   pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
                   required
                 />
                 <br />
-                <label for="tel" className="field-type">
+                <label htmlFor="tel" className="field-type">
                   Your Phone Number:
                 </label>
-                <input type="tel" id="tel" name="clienttel" title="123-333-4444" maxlength="12" />
+                <input type="tel" id="tel" name="clienttel" title="123-333-4444" maxLength="12" />
                 <br />
                 <p>Subject:</p>
                 <select name="subject" required>

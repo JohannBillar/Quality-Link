@@ -1,4 +1,5 @@
 import jQuery from 'jquery';
+import logoIcon from '../../assets/quality-link-links.png';
 
 export const menumaker = (function($) {
   $.fn.menumaker = function(options) {
@@ -19,7 +20,7 @@ export const menumaker = (function($) {
         .parent()
         .addClass('has-sub');
       if (settings.format != 'select') {
-        cssmenu.prepend('<div id="menu-button">' + settings.title + '</div>');
+        cssmenu.prepend('<div id="menu-button">' + '<span>' + settings.title + '</span>' + '</div>');
         $(this)
           .find('#menu-button')
           .on('click', function() {

@@ -10,7 +10,7 @@ deYoungTheme.overrideThemeStyles = ({ rhythm }, options) => ({
       styles: ['300', '300i', '400'].join(', ')
     }
   ],
-  'p,li': {
+  'p,li, nav div span': {
     fontFamily: ['Open Sans', 'sans-serif'].join(','),
     fontWeight: '300',
     fontSize: `${15 / 18 * 100}%`

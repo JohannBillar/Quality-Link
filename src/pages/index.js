@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
+import { Parallax } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { rhythm } from '../utils/typography';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
+import Helix from '../assets/DNA-Helix_high_989x640.jpg';
+import WorldMap from '../assets/WorldMap_medium_989x640.jpg';
+
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
 
 export default class Index extends Component {
   render() {
     return (
       <div>
         <section>
-          <div>
-            <Header1 color="#161f4b">Quality Link Consulting</Header1>
-          </div>
-          <section>
+          <Parallax bgImage={Helix} strength={200}>
+            <Header1 color="#ffffff">
+              <span className="quality-link-consulting">Quality Link Consulting</span>
+            </Header1>
+          </Parallax>
+
+          <section style={container}>
             <Header2 color="#161f4b">Audits and Consulting</Header2>
             <div className="row">
               <div className="seven columns">
@@ -39,30 +52,34 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <section>
-          <div>
-            <Header1 color="#161f4b">Global Quality Assurance</Header1>
+        <Parallax bgImage={WorldMap} strength={500}>
+          <div style={container} className="row">
+            <section className="nine columns">
+              <Header1 color="#161f4b">
+                <span className="global-quality-assurance">Global Quality Assurance</span>
+              </Header1>
+            </section>
+            <article className="three columns">
+              <ul className="country-list">
+                <li>United States</li>
+                <li>Canada</li>
+                <li>Argentina</li>
+                <li>Brazil</li>
+                <li>South Korea</li>
+                <li>Japan</li>
+                <li>Netherlands</li>
+                <li>Germany</li>
+                <li>United Kingdom</li>
+                <li>Spain</li>
+                <li>Italy</li>
+                <li>Hungary</li>
+                <li>New Zealand</li>
+              </ul>
+            </article>
           </div>
-          <article>
-            <ul className="country-list">
-              <li>United States</li>
-              <li>Canada</li>
-              <li>Argentina</li>
-              <li>Brazil</li>
-              <li>South Korea</li>
-              <li>Japan</li>
-              <li>Netherlands</li>
-              <li>Germany</li>
-              <li>United Kingdom</li>
-              <li>Spain</li>
-              <li>Italy</li>
-              <li>Hungary</li>
-              <li>New Zealand</li>
-            </ul>
-          </article>
-        </section>
+        </Parallax>
 
-        <section>
+        <section style={container}>
           <Header2 color="#161f4b">Quality Link Services</Header2>
           <div className="row">
             <section className="six columns services" style={{ marginTop: `${rhythm(1 / 2)}` }}>
@@ -71,6 +88,7 @@ export default class Index extends Component {
               </Link>
             </section>
             <nav className="six columns services">
+              <Header3 color="#3348b1">Learn More About</Header3>
               <ul className="quality-link-icon">
                 <li>
                   <Link to="/services/#global-quality-audits">Global Quality Audits</Link>
