@@ -194,6 +194,10 @@ nav#cssmenu ul {
   text-align: right !important;
 }
 
+div.navigation-logo {
+  display: none;
+}
+
 @media (min-width: 768px) {
   div.navigation-logo {
     float: left;

@@ -3,17 +3,16 @@ import Link from 'gatsby-link';
 import { rhythm } from '../../utils/typography';
 import './footer.css';
 
+const container = {
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
+  paddingTop: 0
+};
+
 const Footer = () => (
   <footer className="footer">
-    <section
-      style={{
-        width: '100%',
-        maxWidth: 960,
-        margin: `0 auto`,
-        padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
-        paddingTop: 0
-      }}
-    >
+    <section style={container}>
       <section className="row">
         <section className="four columns">
           <h4>Need help? Contact Us</h4>

@@ -1,17 +1,21 @@
 import React from 'react';
 
-export const Header1 = ({ color, children }) => (
-  <h1
-    style={{
-      textTransform: 'uppercase',
-      textAlign: 'center',
-      paddingTop: '8rem',
-      paddingBottom: '8rem',
-      color: color
-    }}
-  >
-    {children}
-  </h1>
+export const Header1 = ({ color, children, paddingTop, paddingBottom }) => (
+  <div style={{ height: 500 }}>
+    <h1
+      style={{
+        textTransform: 'uppercase',
+        textAlign: 'center',
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%,-50%)',
+        color: color
+      }}
+    >
+      {children}
+    </h1>
+  </div>
 );
 
 export const Header2 = ({ color, children }) => (
