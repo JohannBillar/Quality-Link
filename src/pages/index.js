@@ -66,7 +66,7 @@ export default class Index extends Component {
           </div>
         </MediaQuery>
         <MediaQuery query="(min-width: 768px)">
-          <Parallax bgImage={WorldMap} strength={500}>
+          <Parallax bgImage={WorldMap} strength={500} blur={{ min: -1, max: 3 }}>
             <div style={container} className="row">
               <section className="nine columns">
                 <Header1 color="#161f4b">
