@@ -1,3 +1,25 @@
+/* Color Declarations
+------------------------------------------------*/
+
+/* logo colors */
+/* #1d2965 - logo dark blue - background color in footer */
+/* #b5c5e9 - logo light blue */
+
+/* text colors */
+/* #161f4b - some h1 and darker blue shade of #1d2965 */
+/* #ffffff - plain old white */
+/* #3348b1 - h3 */
+
+/* Shades of blue base #1d2965
+  #4562f1 - lightest
+  #3348b1 - lighter
+  --------------------
+  #1d2965 - base color
+  --------------------
+  #212e72 - dark-lighter
+  #161f4b - darkest
+-----------------------------------------------*/
+
 html {
   box-sizing: border-box;
   height: 100vh;
@@ -235,6 +257,121 @@ span.quality-link-services {
 .services ul li {
   font-style: italic;
   font-weight: lighter;
+}
+
+/* Forms
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+textarea,
+select {
+  height: 38px;
+  padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
+  background-color: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+/* Removes awkward default styles on some inputs for iOS */
+input[type='email'],
+input[type='number'],
+input[type='search'],
+input[type='text'],
+input[type='tel'],
+input[type='url'],
+input[type='password'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+textarea {
+  min-height: 150px;
+  width: 100%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+input[type='email']:focus,
+input[type='number']:focus,
+input[type='search']:focus,
+input[type='text']:focus,
+input[type='tel']:focus,
+input[type='url']:focus,
+input[type='password']:focus,
+textarea:focus,
+select:focus {
+  border: 1px solid #b5c5e9; /* default color ##33C3F0 */
+  outline: 0;
+}
+
+/* makes labels bold */
+label,
+legend,
+form fieldset p {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+fieldset {
+  padding: 0;
+  border-width: 0;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+  display: inline;
+}
+
+label > .label-body {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+/* Button
+--------------------------------------------- */
+button {
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background-color: #1d2965;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease 0s;
+  -moz-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #3348b1;
+  color: #ffffff;
+}
+
+.btn-default {
+  height: 40px;
+  min-height: 19px;
+  width: 142px;
+}
+
+.btn-small {
+  height: 27px;
+  min-height: 19px;
+  width: 71px;
 }
 
 /* style the groups
