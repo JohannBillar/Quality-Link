@@ -19,7 +19,7 @@ const Training = () => (
         <h1>Training</h1>
       </div>
     </MediaQuery>
-    <MediaQuery query="(min-device-width: 768px)">
+    <MediaQuery query="(min-width: 768px)">
       <Parallax bgImage={Beaker} strength={400}>
         <Header1 color="#ffffff">
           <span className="quality-link-training">Training</span>

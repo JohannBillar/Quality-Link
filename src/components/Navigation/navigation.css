@@ -3,13 +3,14 @@
 nav#cssmenu {
   width: 100%;
 }
-#cssmenu {
+.fixed-nav nav.primary-navigation {
   position: fixed;
   top: 0;
   margin: auto;
   left: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
 }
 
 #cssmenu,
@@ -131,7 +132,7 @@ nav#cssmenu {
 #cssmenu.small-screen.align-center {
   float: none;
   display: block;
-  border-top: 1px solid rgba(100, 100, 100, 0.1);
+  /*border-top: 1px solid rgba(100, 100, 100, 0.1);*/
 }
 #cssmenu.small-screen > ul > li:hover > a,
 #cssmenu.small-screen > ul > li > a:hover {
@@ -156,7 +157,7 @@ nav#cssmenu {
   background: #1d2965;
 }
 #cssmenu.small-screen #menu-button:after {
-  content: '';
+  /*  content: '';
   position: absolute;
   right: 20px;
   top: 17px;
@@ -167,21 +168,21 @@ nav#cssmenu {
   border-top: 2px solid #ffffff;
   border-bottom: 2px solid #ffffff;
   width: 22px;
-  height: 3px;
+  height: 3px;*/
 }
 #cssmenu.small-screen #menu-button.menu-opened:after {
   border-top: 2px solid #dff2fa;
   border-bottom: 2px solid #dff2fa;
 }
 #cssmenu.small-screen #menu-button:before {
-  content: '';
+  /*  content: '';
   position: absolute;
   right: 20px;
   top: 27px;
   display: block;
   width: 22px;
   height: 2px;
-  background: #ffffff;
+  background: #ffffff;*/
 }
 #cssmenu.small-screen #menu-button.menu-opened:before {
   background: #dff2fa;
@@ -193,7 +194,9 @@ nav#cssmenu {
 nav#cssmenu ul {
   text-align: right !important;
 }
-
+.hamburger {
+  float: right;
+}
 div.navigation-logo {
   display: none;
 }

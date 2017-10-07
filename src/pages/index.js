@@ -25,7 +25,7 @@ export default class Index extends Component {
               <h1>Quality Link Consulting</h1>
             </div>
           </MediaQuery>
-          <MediaQuery query="(min-device-width: 768px)">
+          <MediaQuery query="(min-width: 768px)">
             <Parallax bgImage={Helix} strength={200}>
               <Header1 color="#ffffff">
                 <span className="quality-link-consulting">Quality Link Consulting</span>
@@ -65,7 +65,7 @@ export default class Index extends Component {
             <h1>Global Quality Assurance</h1>
           </div>
         </MediaQuery>
-        <MediaQuery query="(min-device-width: 768px)">
+        <MediaQuery query="(min-width: 768px)">
           <Parallax bgImage={WorldMap} strength={500}>
             <div style={container} className="row">
               <section className="nine columns">

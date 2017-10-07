@@ -20,7 +20,16 @@ export const menumaker = (function($) {
         .parent()
         .addClass('has-sub');
       if (settings.format != 'select') {
-        cssmenu.prepend('<div id="menu-button">' + '<span>' + settings.title + '</span>' + '</div>');
+        cssmenu.prepend(
+          '<div id="menu-button">' +
+            '<span>' +
+            settings.title +
+            '</span>' +
+            '<div class="hamburger">' +
+            '<span class="fa fa-bars" aria-hidden="true"></span>' +
+            '</div>' +
+            '</div>'
+        );
         $(this)
           .find('#menu-button')
           .on('click', function() {

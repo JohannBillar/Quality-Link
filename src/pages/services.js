@@ -19,7 +19,7 @@ const Services = () => (
         <h1>Services</h1>
       </div>
     </MediaQuery>
-    <MediaQuery query="(min-device-width: 768px)">
+    <MediaQuery query="(min-width: 768px)">
       <Parallax bgImage={Beaker} strength={400}>
         <Header1 color="#161f4b">
           <span className="quality-link-services">Services</span>
