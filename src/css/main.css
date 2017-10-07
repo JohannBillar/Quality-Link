@@ -183,8 +183,15 @@ a:active {
   }
 }
 
-/* Headers on top of images */
+.mobile-h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+.mobile-h1 h1 {
+  color: #161f4b;
+}
 
+/* Headers on top of images */
 span.quality-link-consulting,
 span.quality-link-training {
   padding: 1px;
@@ -311,6 +318,7 @@ span.quality-link-services {
 }*/
 
 /* Self Clearing Goodness */
+
 .container:after,
 .row:after,
 .u-cf {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
+import MediaQuery from 'react-responsive';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Beaker from '../assets/Periodic-Table_high_989x640.jpg';
 import { rhythm } from '../utils/typography';
@@ -13,11 +14,18 @@ const container = {
 
 const Training = () => (
   <div>
-    <Parallax bgImage={Beaker} strength={400}>
-      <Header1 color="#ffffff">
-        <span className="quality-link-training">Training</span>
-      </Header1>
-    </Parallax>
+    <MediaQuery query="(max-width: 766px)">
+      <div className="mobile-h1">
+        <h1>Training</h1>
+      </div>
+    </MediaQuery>
+    <MediaQuery query="(min-width: 768px)">
+      <Parallax bgImage={Beaker} strength={400}>
+        <Header1 color="#ffffff">
+          <span className="quality-link-training">Training</span>
+        </Header1>
+      </Parallax>
+    </MediaQuery>
     <section style={container}>
       <section>
         <Header2 color="#161f4b">Quality Link Training</Header2>

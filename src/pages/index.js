@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import MediaQuery from 'react-responsive';
 import { rhythm } from '../utils/typography';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Helix from '../assets/DNA-Helix_high_989x640.jpg';
@@ -19,11 +20,18 @@ export default class Index extends Component {
     return (
       <div>
         <section>
-          <Parallax bgImage={Helix} strength={200}>
-            <Header1 color="#ffffff">
-              <span className="quality-link-consulting">Quality Link Consulting</span>
-            </Header1>
-          </Parallax>
+          <MediaQuery query="(max-width: 766px)">
+            <div className="mobile-h1">
+              <h1>Quality Link Consulting</h1>
+            </div>
+          </MediaQuery>
+          <MediaQuery query="(min-width: 768px)">
+            <Parallax bgImage={Helix} strength={200}>
+              <Header1 color="#ffffff">
+                <span className="quality-link-consulting">Quality Link Consulting</span>
+              </Header1>
+            </Parallax>
+          </MediaQuery>
 
           <section style={container}>
             <Header2 color="#161f4b">Audits and Consulting</Header2>
@@ -52,32 +60,39 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <Parallax bgImage={WorldMap} strength={500}>
-          <div style={container} className="row">
-            <section className="nine columns">
-              <Header1 color="#161f4b">
-                <span className="global-quality-assurance">Global Quality Assurance</span>
-              </Header1>
-            </section>
-            <article className="three columns">
-              <ul className="country-list">
-                <li>United States</li>
-                <li>Canada</li>
-                <li>Argentina</li>
-                <li>Brazil</li>
-                <li>South Korea</li>
-                <li>Japan</li>
-                <li>Netherlands</li>
-                <li>Germany</li>
-                <li>United Kingdom</li>
-                <li>Spain</li>
-                <li>Italy</li>
-                <li>Hungary</li>
-                <li>New Zealand</li>
-              </ul>
-            </article>
+        <MediaQuery query="(max-width: 766px)">
+          <div className="mobile-h1">
+            <h1>Global Quality Assurance</h1>
           </div>
-        </Parallax>
+        </MediaQuery>
+        <MediaQuery query="(min-width: 768px)">
+          <Parallax bgImage={WorldMap} strength={500} blur={{ min: -1, max: 3 }}>
+            <div style={container} className="row">
+              <section className="nine columns">
+                <Header1 color="#161f4b">
+                  <span className="global-quality-assurance">Global Quality Assurance</span>
+                </Header1>
+              </section>
+              <article className="three columns">
+                <ul className="country-list">
+                  <li>United States</li>
+                  <li>Canada</li>
+                  <li>Argentina</li>
+                  <li>Brazil</li>
+                  <li>South Korea</li>
+                  <li>Japan</li>
+                  <li>Netherlands</li>
+                  <li>Germany</li>
+                  <li>United Kingdom</li>
+                  <li>Spain</li>
+                  <li>Italy</li>
+                  <li>Hungary</li>
+                  <li>New Zealand</li>
+                </ul>
+              </article>
+            </div>
+          </Parallax>
+        </MediaQuery>
 
         <section style={container}>
           <Header2 color="#161f4b">Quality Link Services</Header2>
