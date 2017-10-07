@@ -16,27 +16,23 @@ const container = {
 };
 
 const layout = layoutGenerator({
-  mobile: 0,
   phablet: 550,
-  tablet: 768,
-  desktop: 992
+  tablet: 768
 });
 
-const OnMobile = layout.is('mobile');
 const OnAtLeastTablet = layout.isAtLeast('tablet');
 const OnAtMostPhablet = layout.isAtMost('phablet');
-const OnDesktop = layout.is('desktop');
 
 export default class Index extends Component {
   render() {
     return (
       <div>
         <section>
-          <OnMobile>
-            <Header1 color="#ffffff">
-              <span className="quality-link-consulting">Quality Link Consulting</span>
-            </Header1>
-          </OnMobile>
+          <OnAtMostPhablet>
+            <div className="mobile-h1">
+              <h1>Quality Link Consulting</h1>
+            </div>
+          </OnAtMostPhablet>
           <OnAtLeastTablet>
             <Parallax bgImage={Helix} strength={200}>
               <Header1 color="#ffffff">
@@ -72,32 +68,39 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <Parallax bgImage={WorldMap} strength={500}>
-          <div style={container} className="row">
-            <section className="nine columns">
-              <Header1 color="#161f4b">
-                <span className="global-quality-assurance">Global Quality Assurance</span>
-              </Header1>
-            </section>
-            <article className="three columns">
-              <ul className="country-list">
-                <li>United States</li>
-                <li>Canada</li>
-                <li>Argentina</li>
-                <li>Brazil</li>
-                <li>South Korea</li>
-                <li>Japan</li>
-                <li>Netherlands</li>
-                <li>Germany</li>
-                <li>United Kingdom</li>
-                <li>Spain</li>
-                <li>Italy</li>
-                <li>Hungary</li>
-                <li>New Zealand</li>
-              </ul>
-            </article>
+        <OnAtMostPhablet>
+          <div className="mobile-h1">
+            <h1>Global Quality Assurance</h1>
           </div>
-        </Parallax>
+        </OnAtMostPhablet>
+        <OnAtLeastTablet>
+          <Parallax bgImage={WorldMap} strength={500}>
+            <div style={container} className="row">
+              <section className="nine columns">
+                <Header1 color="#161f4b">
+                  <span className="global-quality-assurance">Global Quality Assurance</span>
+                </Header1>
+              </section>
+              <article className="three columns">
+                <ul className="country-list">
+                  <li>United States</li>
+                  <li>Canada</li>
+                  <li>Argentina</li>
+                  <li>Brazil</li>
+                  <li>South Korea</li>
+                  <li>Japan</li>
+                  <li>Netherlands</li>
+                  <li>Germany</li>
+                  <li>United Kingdom</li>
+                  <li>Spain</li>
+                  <li>Italy</li>
+                  <li>Hungary</li>
+                  <li>New Zealand</li>
+                </ul>
+              </article>
+            </div>
+          </Parallax>
+        </OnAtLeastTablet>
 
         <section style={container}>
           <Header2 color="#161f4b">Quality Link Services</Header2>

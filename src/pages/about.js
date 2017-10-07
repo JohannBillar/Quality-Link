@@ -13,8 +13,8 @@ const container = {
 const About = () => (
   <div>
     <section style={container}>
-      <div>
-        <Header1 color="#161f4b">About Us</Header1>
+      <div className="mobile-h1">
+        <h1>About</h1>
       </div>
       <section>
         <Header2 color="#161f4b">About Quality Link Consulting</Header2>

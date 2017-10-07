@@ -13,10 +13,9 @@ const container = {
 const Contact = () => (
   <div>
     <section style={container}>
-      <div>
-        <Header1 color="#161f4b">Contact</Header1>
+      <div className="mobile-h1">
+        <h1>Contact</h1>
       </div>
-
       <section>
         <Header2 color="#161f4b">Contact Quality Link Consulting</Header2>
         <div className="row">

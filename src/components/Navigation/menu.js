@@ -34,6 +34,13 @@ export const menumaker = (function($) {
                 mainmenu.find('ul').show();
               }
             }
+            mainmenu.on('click', function() {
+              if ($(this).hasClass('open')) {
+                $(this)
+                  .hide()
+                  .removeClass('open');
+              }
+            });
           });
 
         var multiTg = function() {

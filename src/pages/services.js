@@ -1,5 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
+import { layoutGenerator } from 'react-break';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Beaker from '../assets/Beaker-Pipette_high_989x640.jpg';
 import { rhythm } from '../utils/typography';
@@ -11,14 +12,28 @@ const container = {
   paddingTop: 0
 };
 
+const layout = layoutGenerator({
+  phablet: 550,
+  tablet: 768
+});
+
+const OnAtLeastTablet = layout.isAtLeast('tablet');
+const OnAtMostPhablet = layout.isAtMost('phablet');
+
 const Services = () => (
   <div>
-    <Parallax bgImage={Beaker} strength={400}>
-      <Header1 color="#161f4b">
-        <span className="quality-link-services">Services</span>
-      </Header1>
-    </Parallax>
-
+    <OnAtMostPhablet>
+      <div className="mobile-h1">
+        <h1>Services</h1>
+      </div>
+    </OnAtMostPhablet>
+    <OnAtLeastTablet>
+      <Parallax bgImage={Beaker} strength={400}>
+        <Header1 color="#161f4b">
+          <span className="quality-link-services">Services</span>
+        </Header1>
+      </Parallax>
+    </OnAtLeastTablet>
     <section style={container}>
       <Header2 color="#161f4b">Quality Link Services</Header2>
       <div className="row services">
