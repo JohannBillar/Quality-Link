@@ -18,10 +18,10 @@ const Contact = () => (
       </div>
       <section>
         <Header2 color="#161f4b">Contact Quality Link Consulting</Header2>
+
         <div className="row">
           <section className="seven columns">
             <Header3 color="#3348b1">Our Address</Header3>
-
             <address>
               <span className="fa fa-map-marker" /> 4445 Eastgate Mall, Suite 200<br />
               San Diego, CA 92121<br />
@@ -62,7 +62,7 @@ const Contact = () => (
                   id="email"
                   name="clientemail"
                   placeholder=" enter your email"
-                  maxLength="30"
+                  maxLength="50"
                   pattern="^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$"
                   required
                 />
@@ -74,17 +74,15 @@ const Contact = () => (
                 <br />
                 <p>Subject:</p>
                 <select name="subject" required>
-                  <option value="" />
-                  <option value="" />
-                  <option value="" />
-                  <option value="" />
-                  <option value="" />
-                  <option value="" />
-                  <option value="" />
+                  <option />
+                  <option value="Inquire about consulting">Inquire about consulting</option>
+                  <option value="Find out about training">Find out about training</option>
+                  <option value="Schedule a call">Schedule a call</option>
+                  <option value="General Information">General Information</option>
                 </select>
                 <p>Describe what we can help you with:</p>
                 <textarea />
-                <button type="submit" name="submit-tee-time">
+                <button className="btn btn-default" name="submit-tee-time">
                   Send Message
                 </button>
               </fieldset>
