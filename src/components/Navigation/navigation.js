@@ -100,4 +100,4 @@ class Navigation extends Component {
   }
 }
 
-export default navigation;
+export default Navigation;
