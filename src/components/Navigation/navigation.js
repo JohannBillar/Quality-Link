@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import MediaQuery from 'react-responsive';
-import { menumaker, menuRender } from './menu';
+import jQuery from 'jquery';
+import { menuMaker, menuRender } from './menu';
 import Logo from '../../assets/QualityLinkLogo_974x110.png';
 
 import './navigation.css';
 
 class Navigation extends Component {
   componentDidMount() {
+    menuMaker(jQuery);
+    menuRender(jQuery);
     const nav = document.querySelector('#cssmenu');
     const topOfNav = nav.offsetTop;
     function fixNav() {

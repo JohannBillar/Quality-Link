@@ -1,8 +1,7 @@
-import jQuery from 'jquery';
 import logoIcon from '../../assets/quality-link-links.png';
 
-export const menumaker = (function($) {
-  $.fn.menumaker = function(options) {
+export const menuMaker = function($) {
+  $.fn.menuMaker = function(options) {
     var cssmenu = $(this),
       settings = $.extend(
         {
@@ -128,12 +127,12 @@ export const menumaker = (function($) {
       return $(window).on('resize', resizeFix);
     });
   };
-})(jQuery);
+};
 
-export const menuRender = (function($) {
+export const menuRender = function($) {
   $(document).ready(function() {
     $(document).ready(function() {
-      $('#cssmenu').menumaker({
+      $('#cssmenu').menuMaker({
         title: 'Menu',
         format: 'dropdown'
       });
@@ -144,4 +143,4 @@ export const menuRender = (function($) {
       });
     });
   });
-})(jQuery);
+};
