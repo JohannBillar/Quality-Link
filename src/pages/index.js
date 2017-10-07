@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Parallax } from 'react-parallax';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import { layoutGenerator } from 'react-break';
+import MediaQuery from 'react-responsive';
 import { rhythm } from '../utils/typography';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Helix from '../assets/DNA-Helix_high_989x640.jpg';
@@ -15,31 +15,23 @@ const container = {
   paddingTop: 0
 };
 
-const layout = layoutGenerator({
-  phablet: 550,
-  tablet: 768
-});
-
-const OnAtLeastTablet = layout.isAtLeast('tablet');
-const OnAtMostPhablet = layout.isAtMost('phablet');
-
 export default class Index extends Component {
   render() {
     return (
       <div>
         <section>
-          <OnAtMostPhablet>
+          <MediaQuery query="(max-width: 766px)">
             <div className="mobile-h1">
               <h1>Quality Link Consulting</h1>
             </div>
-          </OnAtMostPhablet>
-          <OnAtLeastTablet>
+          </MediaQuery>
+          <MediaQuery query="(min-device-width: 768px)">
             <Parallax bgImage={Helix} strength={200}>
               <Header1 color="#ffffff">
                 <span className="quality-link-consulting">Quality Link Consulting</span>
               </Header1>
             </Parallax>
-          </OnAtLeastTablet>
+          </MediaQuery>
 
           <section style={container}>
             <Header2 color="#161f4b">Audits and Consulting</Header2>
@@ -68,12 +60,12 @@ export default class Index extends Component {
           </section>
         </section>
 
-        <OnAtMostPhablet>
+        <MediaQuery query="(max-width: 766px)">
           <div className="mobile-h1">
             <h1>Global Quality Assurance</h1>
           </div>
-        </OnAtMostPhablet>
-        <OnAtLeastTablet>
+        </MediaQuery>
+        <MediaQuery query="(min-device-width: 768px)">
           <Parallax bgImage={WorldMap} strength={500}>
             <div style={container} className="row">
               <section className="nine columns">
@@ -100,7 +92,7 @@ export default class Index extends Component {
               </article>
             </div>
           </Parallax>
-        </OnAtLeastTablet>
+        </MediaQuery>
 
         <section style={container}>
           <Header2 color="#161f4b">Quality Link Services</Header2>

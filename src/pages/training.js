@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import { layoutGenerator } from 'react-break';
+import MediaQuery from 'react-responsive';
 import { Header1, Header2, Header3 } from '../components/text/Headers';
 import Beaker from '../assets/Periodic-Table_high_989x640.jpg';
 import { rhythm } from '../utils/typography';
@@ -12,28 +12,20 @@ const container = {
   paddingTop: 0
 };
 
-const layout = layoutGenerator({
-  phablet: 550,
-  tablet: 768
-});
-
-const OnAtLeastTablet = layout.isAtLeast('tablet');
-const OnAtMostPhablet = layout.isAtMost('phablet');
-
 const Training = () => (
   <div>
-    <OnAtMostPhablet>
+    <MediaQuery query="(max-width: 766px)">
       <div className="mobile-h1">
         <h1>Training</h1>
       </div>
-    </OnAtMostPhablet>
-    <OnAtLeastTablet>
+    </MediaQuery>
+    <MediaQuery query="(min-device-width: 768px)">
       <Parallax bgImage={Beaker} strength={400}>
         <Header1 color="#ffffff">
           <span className="quality-link-training">Training</span>
         </Header1>
       </Parallax>
-    </OnAtLeastTablet>
+    </MediaQuery>
     <section style={container}>
       <section>
         <Header2 color="#161f4b">Quality Link Training</Header2>
