@@ -37,7 +37,7 @@ const Contact = () => (
           </section>
 
           <section className="five columns">
-            <form name="contactus-form">
+            <form name="contactus-form" netlify>
               <fieldset>
                 <legend>
                   <Header3 color="#3348b1">WRITE US</Header3>
@@ -82,7 +82,7 @@ const Contact = () => (
                 </select>
                 <p>Describe what we can help you with:</p>
                 <textarea />
-                <button className="btn btn-default" name="submit-tee-time">
+                <button className="btn btn-default" type="submit" name="submit-contact-form">
                   Send Message
                 </button>
               </fieldset>
