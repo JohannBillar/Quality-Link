@@ -37,11 +37,22 @@ const Contact = () => (
           </section>
 
           <section className="five columns">
-            <form name="contactus-form">
+            <form
+              name="contactus-form"
+              method="post"
+              action="/thanks"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+            >
               <fieldset>
                 <legend>
                   <Header3 color="#3348b1">WRITE US</Header3>
                 </legend>
+                <p hidden>
+                  <label>
+                    Don’t fill this out: <input name="bot-field" />
+                  </label>
+                </p>
                 <label htmlFor="name" className="field-type">
                   Your Name:
                 </label>
@@ -82,7 +93,7 @@ const Contact = () => (
                 </select>
                 <p>Describe what we can help you with:</p>
                 <textarea />
-                <button className="btn btn-default" name="submit-tee-time">
+                <button className="btn btn-default" type="submit" name="submit-contact-form">
                   Send Message
                 </button>
               </fieldset>
