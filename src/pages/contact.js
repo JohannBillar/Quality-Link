@@ -86,8 +86,10 @@ const Contact = () => (
                   <option value="Schedule a call">Schedule a call</option>
                   <option value="General Information">General Information</option>
                 </select>
-                <p>Describe what we can help you with:</p>
-                <textarea />
+                <label htmlFor="comment" className="field-type">
+                  <p>Describe what we can help you with:</p>
+                </label>
+                <textarea id="comment" name="comment" />
                 <button className="btn btn-default" type="submit" name="submit-contact-form">
                   Send Message
                 </button>
