@@ -48,7 +48,6 @@ const Contact = () => (
                 <legend>
                   <Header3 color="#3348b1">WRITE US</Header3>
                 </legend>
-                <input type="hidden" name="form-name" value="contact" />
                 <p hidden>
                   <label>
                     Don’t fill this out: <input name="bot-field" />
